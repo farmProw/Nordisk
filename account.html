@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Accounts Analysis</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+<header class="header">
+    <div class="container">
+        <div class="header__inner">
+            <div class="header__logo">
+                <a href="#">
+                    <img src="./images/header-logo.svg" alt="">
+                </a>
+            </div>
+            <nav class="header__menu">
+                <ul class="header__menu-list">
+                    <li><a href="#">Home</a></li>
+                    <li class="active"><a href="account.html">Account Analysis</a></li>
+                    <li><a href="followers.html">Followers Analysis</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+<section class="form__analyser">
+    <div class="container">
+        <div class="form__analyser-inner">
+            <input class="form__analyser-input" type="text" placeholder="Enter account name Instagram here">
+            <div class="form__analyser-btn-container">
+                <button class="form__analyser-btn btn__large">Analyze</button>
+            </div>
+        </div>
+    </div>
+</section>
+<section class=" photo__analysis">
+    <div class="container">
+        <div class="photo__analysis-title title">Photo analysis</div>
+        <div class="photo__analysis-inner">
+            <div class="analysis__inner-column">
+                <div class="photo__analysis-block">
+                    <div class="block__analysis-head">
+                        <div class="block__analysis-inner">
+                            <div class="head__analysis-description">
+                                <a href="" class="description__user-img">
+                                    <img src="./images/followers-user.jpg" alt="">
+                                </a>
+                                <div class="description__user-information">
+                                    <div class="user__wrapper">
+                                        <div class="user__name">Sode Will</div>
+                                        <div class="user__followers-count">
+                                            <span class="count__followers little__text-violet">121</span>
+                                            <span class="label__followers little__text-white">- Followers</span>
+                                        </div>
+                                    </div>
+                                    <div class="user__subscription-count">
+                                        <span class="count__subscriptions little__text-violet">232</span>
+                                        <span class="label__subscriptions little__text-white">- Subscriptions</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="head__analysis-btns">
+                                <button class="analysis__btn btn__small-42">Analyze Followers</button>
+                                <button class="analysis__btn btn__small-42">Analyze Subscriptions</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="block__analysis-content">
+
+                        <div class="content__photos">
+                            <div class="content__photo">
+                                <a href="#">
+                                    <img src="https://picsum.photos/300/300?random=1" alt="">
+                                </a>
+                            </div>
+                            <div class="content__photo">
+                                <a href="#">
+                                    <img src="https://picsum.photos/300/300?random=6" alt="">
+                                </a>
+                            </div>
+                            <div class="content__photo">
+                                <a href="#">
+                                    <img src="https://picsum.photos/300/300?random=2" alt="">
+                                </a>
+                            </div>
+                            <div class="content__photo">
+                                <a href="#">
+                                    <img src="https://picsum.photos/300/300?random=1" alt="">
+                                </a>
+                            </div>
+                            <div class="content__photo">
+                                <a href="#">
+                                    <img src="https://picsum.photos/300/300?random=3" alt="">
+                                </a>
+                            </div>
+                            <div class="content__photo">
+                                <a href="#">
+                                    <img src="https://picsum.photos/300/300?random=4" alt="">
+                                </a>
+                            </div>
+                            <div class="content__photo">
+                                <a href="#">
+                                    <img src="https://picsum.photos/300/300?random=1" alt="">
+                                </a>
+                            </div>
+                            <div class="content__photo">
+                                <a href="#">
+                                    <img src="https://picsum.photos/300/300?random=2" alt="">
+                                </a>
+                            </div>
+                            <div class="content__photo">
+                                <a href="#">
+                                    <img src="https://picsum.photos/300/300?random=1" alt="">
+                                </a>
+                            </div>
+                            <div class="content__photo">
+                                <a href="#">
+                                    <img src="https://picsum.photos/300/300?random=1" alt="">
+                                </a>
+                            </div>
+                            <div class="content__photo">
+                                <a href="#">
+                                    <img src="https://picsum.photos/300/300?random=1" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- БЛОК ЯРИКА   -->
+            <div class="aside__bar">
+                <div class="aside__bar-row1">
+                    <div class="progres__bar">
+                        <div class="progres__bar-title">
+                            <div class="title__row-one">BMI over 30</div>
+                            <div class="title__row-two">Photo of person has signs</div>
+                        </div>
+                        <div class="progres__circle">
+                            <div class="circle" id="circle-c"  data-value="0.86">
+                                <strong></strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="aside__bar-row2">
+                    <div class="shedule__bar">
+                        <canvas id="myChart" width="380" height="200"></canvas>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+<section class="comment__analysis" style="height: 513px">
+    <div class="container">
+        <div class="comment__analysis-title title">Comment analysis</div>
+        <div class=" comment__analysis-inner">
+            <div class="comment__analysis-inner-column">
+                <div class="comment__analysis-block ">
+                    <div class="block__comment-head ">
+                        <div class="block__comment-inner">
+                            <div class="head__comment-description">
+                                <a href="" class="comment__user-img">
+                                    <img src="./images/followers-user.jpg" alt="">
+                                </a>
+                                <div class="comment__user-information">
+                                    <div class="comment__user-wrapper">
+                                        <div class="comment__user-name">Sode Will</div>
+                                        <div class="user__followers-count">
+                                            <span class="count__followers little__text-violet">121</span>
+                                            <span class="label__followers little__text-white">- Followers</span>
+                                        </div>
+                                    </div>
+                                    <div class="user__subscription-count">
+                                        <span class="count__subscriptions little__text-violet">232</span>
+                                        <span class="label__subscriptions little__text-white">- Subscriptions</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="head__analysis-btns">
+                                <button class="analysis__btn btn__small-42">Analyze Followers</button>
+                                <button class="analysis__btn btn__small-42">Analyze Subscriptions</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="block__comment-content">
+                        <div class="block__comment-wrapper">
+
+                            <div class="content__text-item">
+                                <div class="content__text">
+                                    Resources exquisite set arranging moonlight sex him household had. Months had too ham cousin remove far spirit. She procuring burger the why performed continual improving. Civil songs arranging moonlight sex him Resources exquisite set arranging moonlight sex him household had. Months had too ham cousin remove far spirit. She procuring burger the why performed continual improving. Civil songs arranging moonlight sex him
+                                </div>
+                            </div>
+
+                            <div class="content__text-item">
+                                <div class="content__text">
+                                    Resources exquisite set arranging moonlight sex him household had. Months had too ham cousin remove far spirit. She procuring burger the why performed continual improving. Civil songs arranging moonlight sex him Resources exquisite set arranging moonlight sex him household had. Months had too ham cousin remove far spirit. She procuring burger the why performed continual improving. Civil songs arranging moonlight sex him
+                                </div>
+                            </div>
+
+                            <div class="content__text-item">
+                                <div class="content__text">
+                                    Resources exquisite set arranging moonlight sex him household had. Months had too ham cousin remove far spirit. She procuring burger the why performed continual improving. Civil songs arranging moonlight sex him Resources exquisite set arranging moonlight sex him household had. Months had too ham cousin remove far spirit. She procuring burger the why performed continual improving. Civil songs arranging moonlight sex him
+                                </div>
+                            </div>
+
+                            <div class="content__text-item">
+                                <div class="content__text">
+                                    Resources exquisite set arranging moonlight sex him household had. Months had too ham cousin remove far spirit. She procuring burger the why performed continual improving. Civil songs arranging moonlight sex him Resources exquisite set arranging moonlight sex him household had. Months had too ham cousin remove far spirit. She procuring burger the why performed continual improving. Civil songs arranging moonlight sex him
+                                </div>
+                            </div>
+
+                            <div class="content__text-item">
+                                <div class="content__text">
+                                    Resources exquisite set arranging moonlight sex him household had. Months had too ham cousin remove far spirit. She procuring burger the why performed continual improving. Civil songs arranging moonlight sex him Resources exquisite set arranging moonlight sex him household had. Months had too ham cousin remove far spirit. She procuring burger the why performed continual improving. Civil songs arranging moonlight sex him
+                                </div>
+                            </div>
+
+                            <div class="content__text-item">
+                                <div class="content__text">
+                                    Resources exquisite set arranging moonlight sex him household had. Months had too ham cousin remove far spirit. She procuring burger the why performed continual improving. Civil songs arranging moonlight sex him Resources exquisite set arranging moonlight sex him household had. Months had too ham cousin remove far spirit. She procuring burger the why performed continual improving. Civil songs arranging moonlight sex him
+                                </div>
+                            </div>
+
+                            <div class="content__text-item">
+                                <div class="content__text">
+                                    Resources exquisite set arranging moonlight sex him household had. Months had too ham cousin remove far spirit. She procuring burger the why performed continual improving. Civil songs arranging moonlight sex him Resources exquisite set arranging moonlight sex him household had. Months had too ham cousin remove far spirit. She procuring burger the why performed continual improving. Civil songs arranging moonlight sex him
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="aside__bar">
+                <div class="aside__bar-row1">
+                    <div class="progres__bar">
+                        <div class="progres__bar-title">
+                            <div class="title__row-one">BMI over 30</div>
+                            <div class="title__row-two">Photo of person has signs</div>
+                        </div>
+                        <div class="progres__circle">
+                            <div class="circle" id="circle-b" data-value="0.42">
+                                <strong></strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="banner__obesity">
+    <div class="container">
+        <div class="banner__obesity-inner">
+            <div class="banner__information">
+                <div class="banner__persents">12%</div>
+                <div class="banner__text">Subscribers to this account have signs of obesity</div>
+            </div>
+            <div class="banner__img">
+                <img src="./images/fat-girl.svg" alt="">
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <div class="footer__top">
+            <a href="#" class="footer__logo">
+                <img src="./images/header-logo.svg" alt="">
+            </a>
+            <div class="footer__item">
+                <ul class="footer__item-list">
+                    <li class="footer__list-title"><a href="#">Product</a></li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Account Analysis</a></li>
+                    <li><a href="#">Followers Analysis</a></li>
+                </ul>
+            </div>
+            <div class="footer__item">
+                <ul class="footer__item-list">
+                    <li class="footer__list-title"><a href="#">Resources</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Customers</a></li>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Product Updates</a></li>
+                </ul>
+            </div>
+            <div class="footer__item">
+                <ul class="footer__item-list">
+                    <li class="footer__list-title"><a href="#">About</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Press/Media</a></li>
+                    <li><a href="#">Legal</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <div class="footer__bottom-text">
+                © 2021 - PieSync NV Manage your website data collection preferences here
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-circle-progress/1.2.2/circle-progress.min.js"
+        crossorigin="anonymous"></script>
+<script src="vendors/jquery-circle-progress-1.2.2"></script>
+<script src="scripts/script.js"></script>
+<script>
+    var ctx = document.getElementById('myChart').getContext('2d');
+    var gradient1 = ctx.createLinearGradient(0, 0, 0, 600);
+    var gradient2 = ctx.createLinearGradient(0, 0, 0, 600);
+    gradient1.addColorStop(0, 'rgba(95, 201, 165, 0.3)');
+    gradient1.addColorStop(1, 'rgba(95, 201, 165, 0)');
+    gradient2.addColorStop(0, 'rgba(248, 209, 130, 0.2)');
+    gradient2.addColorStop(1, 'rgba(248, 209, 130, 0)');
+    var myChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            datasets: [{
+                radius:0,
+
+                label: 'Active',
+                data: [12, 19, 3, 5, 2, 3],
+                backgroundColor: gradient1,
+                borderColor: '#5FC9A5',
+                borderWidth: 2
+
+            },
+            {
+                radius:0,
+                label: 'Non Active',
+                data: [10,20,4,3,7],
+                backgroundColor: gradient2,
+                borderColor: '#F8D182',
+                borderWidth: 2
+            }]
+        },
+        options: {
+            legend: {
+                display: true,
+                labels: {
+                    fontColor: 'rgba(5, 27, 97, 1)',
+                    fontFamily: 'GT Walsheim Pro',
+                    fontSize: 14,
+                    boxWidth: 30,
+                }
+            },
+
+            dataset:{
+                display: false
+            },
+            scales: {
+                yAxes: [{
+                        display:false
+                }]
+            }
+        }
+    });
+</script>
+</body>
+
+</html>

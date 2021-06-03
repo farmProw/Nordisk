@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="8c017560-20fb-43e1-9b4a-e0486f0cf938" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution>
+      <executable />
+    </execution>
+  </component>
+  <component name="ProjectId" id="1qRa4zOyo1xsKOIngCuVcZxtgTg" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8c017560-20fb-43e1-9b4a-e0486f0cf938" name="Default Changelist" comment="" />
+      <created>1617044669224</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1617044669224</updated>
+      <workItem from="1617044674581" duration="7074000" />
+      <workItem from="1617096762807" duration="2982000" />
+      <workItem from="1617104913581" duration="25094000" />
+      <workItem from="1617138781270" duration="4122000" />
+      <workItem from="1617176385540" duration="21431000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="2610" y="301" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1617125488365">
+      <screen x="1920" y="30" width="1920" height="1050" />
+    </state>
+    <state x="2610" y="301" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.30.1536.834/1920.30.1920.1050@1920.30.1920.1050" timestamp="1617125488365" />
+    <state x="2381" y="197" key="SettingsEditor" timestamp="1617111275540">
+      <screen x="1920" y="30" width="1920" height="1050" />
+    </state>
+    <state x="2381" y="197" key="SettingsEditor/0.30.1536.834/1920.30.1920.1050@1920.30.1920.1050" timestamp="1617111275540" />
+    <state x="2560" y="378" key="com.intellij.ide.util.TipDialog" timestamp="1617176786426">
+      <screen x="1920" y="30" width="1920" height="1050" />
+    </state>
+    <state x="2560" y="378" key="com.intellij.ide.util.TipDialog/0.30.1536.834/1920.30.1920.1050@1920.30.1920.1050" timestamp="1617176786426" />
+  </component>
+</project>

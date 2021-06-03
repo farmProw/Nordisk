@@ -1,0 +1,948 @@
+html {
+   box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+   box-sizing: inherit;
+}
+
+body {
+   font-family: "GT Walsheim Pro", sans-serif;
+   font-size: 16px;
+   font-style: normal;
+}
+
+a {
+   color: #000;
+   display: inline-block;
+   text-decoration: none;
+}
+
+ul {
+   list-style: none;
+   padding: 0;
+   margin: 0;
+}
+input[type=checkbox], button {
+   cursor: pointer;
+}
+img {
+   user-select: none;
+}
+.btn__large {
+   font-family: 'GT Walsheim Pro', sans-serif;
+   font-size: 18px;
+   font-weight: 400;
+   height: 60px;
+   background-color: #459ED5;
+   color: #fff;
+   border-radius: 30px;
+   outline: transparent;
+   border: none;
+}
+.title {
+   font-family: "GT Walsheim Pro";
+   font-size: 42px;
+   font-weight: 700;
+   line-height: 55px;
+   color: #051B61;
+}
+.btn__small {
+   height: 48px;
+   background-color: #459ED5;
+   border-radius: 30px;
+}
+.item-checkbox::after,
+.followers__label::after {
+   content: '';
+   position: absolute;
+   display: block;
+   top: 50%;
+   transform: translate(0, -50%);
+   left: 0;
+   width: 10px;
+   height: 9px;
+   z-index: 2;
+   opacity: 0;
+}
+.item-checkbox::before,
+.followers__label::before {
+   content: '';
+   position: absolute;
+   display: block;
+   top: 50%;
+   transform: translate(0, -50%);
+   left: 0;
+   width: 16px;
+   height: 16px;
+   border: 1px solid #8C8C8C;
+   border-radius: 3px;
+   z-index: 1;
+}
+.container {
+   margin: 0 auto;
+   max-width: 1342px;
+   padding: 0 15px;
+}
+header {
+   position: fixed;
+   width: 100%;
+   padding: 22px 0;
+   background: #fff;
+   z-index: 10;
+   top: 0;
+}
+.header__inner {
+   height: 77px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+
+   padding-right: 20px;
+}
+.header__menu-list {
+   display: flex;
+   line-height: 77px;
+}
+.header__menu-list li {
+   position: relative;
+}
+.header__menu-list li+li {
+   margin-left: 105px;
+}
+.header__menu-list li a {
+   font-family: 'GT Walsheim Pro', sans-serif;
+   font-size: 1rem;
+   font-weight: 400;
+   line-height: 1.5rem;
+}
+.header__menu-list li.active::before {
+   position: absolute;
+   content: "";
+   transform: translate(-50%);
+   left: 50%;
+   bottom: 16px;
+   width: 9px;
+   height: 9px;
+   border-radius: 50%;
+   background-color: #5FC9A5;
+}
+
+/* form-analyser ======================*/
+.form__analyser {
+   margin-top: 220px;
+}
+.form__analyser::before {
+   content: '';
+   background: url("../images/elems-design/search/left-elem-search.svg") no-repeat center;
+   background-size: auto;
+   width: 60px;
+   height: 190px;
+   position: absolute;
+}
+.form__analyser::after {
+   content: '';
+   position: absolute;
+   right: 0;
+   background: url("../images/elems-design/search/right-elem-search.svg") no-repeat center;
+   background-size: auto;
+   width: 60px;
+   height: 190px;
+}
+.form__analyser.active {
+   margin: 46vh 0;
+}
+.form__analyser-inner {
+   display: flex;
+   position: relative;
+}
+.form__analyser-btn-container {
+   display: flex;
+   margin: 0 auto;
+   vertical-align: middle;
+   align-items: center;
+}
+.form__analyser-inner .form__analyser-input {
+   position: relative;
+   height: 60px;
+   max-width: 1042px;
+   width: 100%;
+   border-radius: 28px;
+   padding: 0 40px;
+   border: 1px solid #8C8C8C;
+   outline: transparent;
+}
+.form__analyser-input::-webkit-input-placeholder {
+   opacity: 1; transition: opacity 0.3s ease;
+   background: url("../images/icons/magnifying-glass.svg") no-repeat center;
+   background-position-x: left;
+   padding-left: 35px;
+}
+.form__analyser-input::-moz-placeholder {
+   opacity: 1; transition: opacity 0.3s ease;
+   background: url("../images/icons/magnifying-glass.svg") no-repeat center;
+   background-position-x: left;
+   padding-left: 35px;
+}
+.form__analyser-input:-moz-placeholder {
+   opacity: 1; transition: opacity 0.3s ease;
+   background: url("../images/icons/magnifying-glass.svg") no-repeat ;
+   background-position-x: left;
+   padding-left: 35px;
+}
+.form__analyser-input:-ms-input-placeholder {
+   opacity: 1; transition: opacity 0.3s ease;
+   background: url("../images/icons/magnifying-glass.svg") no-repeat ;
+   background-position-x: left;
+   padding-left: 35px;
+}
+.form__analyser-input:focus::-webkit-input-placeholder {
+   opacity: 0; transition: opacity 0.3s ease;
+   background: url("../images/icons/magnifying-glass.svg") no-repeat ;
+   background-position-x: left;
+   padding-left: 35px;
+}
+.form__analyser-input:focus::-moz-placeholder {
+   opacity: 0; transition: opacity 0.3s ease;
+   background: url("../images/icons/magnifying-glass.svg") no-repeat ;
+   background-position-x: left;
+   padding-left: 35px;
+}
+.form__analyser-input:focus:-moz-placeholder {
+   opacity: 0; transition: opacity 0.3s ease;
+   background: url("../images/icons/magnifying-glass.svg") no-repeat ;
+   background-position-x: left;
+   padding-left: 35px;
+}
+.form__analyser-input:focus:-ms-input-placeholder {
+   opacity: 0; transition: opacity 0.3s ease;
+   background: url("../images/icons/magnifying-glass.svg") no-repeat ;
+   background-position-x: left;
+   padding-left: 35px;
+}
+
+.form__analyser-inner .form__analyser-magnifying-glass {
+   z-index: 1;
+   top: 50%;
+   left: 36px;
+   transform: translate(0, -50%);
+   position: absolute;
+
+}
+
+.form__analyser-inner .form__analyser-input::placeholder {
+   font-family: 'GT Walsheim Pro', sans-serif;
+   font-size: 13px;
+   font-weight: 700;
+   margin-left: 76px;
+   line-height: 60;
+}
+
+.form__analyser-btn {
+   width: 240px;
+   margin-left: 30px;
+   box-shadow: 0px 24px 40px -14px rgba(69, 158, 213, 0.2);
+}
+.form__analyser-btn:hover {
+   background-color: #2a84bb;
+   box-shadow: none;
+}
+.form__analyser-btn.btn__large:active {
+   width: 220px;
+   height: 55px;
+   box-shadow: none;
+}
+/* Follower Analysis================================ */
+.followers {
+   margin-top: 120px;
+}
+
+.followers__title {
+   font-family: "GT Walsheim Pro", sans-serif;
+   font-size: 42px;
+   font-weight: 700;
+   line-height: 55px;
+   color: #051B61;
+}
+
+.followers__subtitle-block {
+   display: flex;
+   justify-content: space-between;
+   margin-top: 50px;
+   padding-left: 42px;
+   margin-bottom: 24px;
+   font-family: "GT Walsheim Pro", sans-serif;
+   color: #8C8C8C;
+   font-size: 14px;
+   font-weight: 400;
+   line-height: 27px;
+
+
+}
+.followers__subtitle-checkbox {
+   position: relative;
+   display: flex;
+   flex-basis: 64px;
+}
+.followers__checkbox {
+   -webkit-appearance: none;
+   appearance: none;
+   position: absolute;
+}
+.followers__subtitle-checkbox-label {
+   margin-left: 24px;
+}
+.followers__subtitle-checkbox-label::after,
+.followers__subtitle-checkbox-label::before {
+   cursor: pointer;
+}
+.followers__subtitle-checkbox-label::after {
+   position: absolute;
+   width: 10px;
+   height: 9px;
+   left: 3px;
+   opacity: 0;
+   transition: opacity 0.15s linear;
+   background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMCIgaGVpZ2h0PSI3IiBmaWxsPSJub25lIiAgeG1sbnM6dj0iaHR0cHM6Ly92ZWN0YS5pby9uYW5vIj48cGF0aCBkPSJNMSAzbDIuNTAzIDMuMDRhMSAxIDAgMCAwIDEuNTU5LS4wMTlMOSAxIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjxkZWZzIC8+PC9zdmc+") no-repeat center;
+   background-size: contain;
+}
+.followers__subtitle-checkbox:checked + .followers__subtitle-checkbox-label::after {
+   opacity: 1;
+}
+.followers__subtitle-checkbox:checked + .followers__subtitle-checkbox-label::before {
+   background-color: #5FC9A5;
+   border: 1px solid #5FC9A5;
+}
+.followers__subtitle-checkbox img {
+   transition: .3s;
+}
+.followers__subtitle-checkbox:checked+.followers__subtitle-checkbox-label img.active {
+   transform: rotateX(180deg);
+}
+
+.followers__subtitle-name {
+   display: flex;
+   flex-basis: 23%;
+}
+
+.followers__subtitle-photo {
+   display: flex;
+   flex-basis: 278px;
+}
+.followers__subtitle-comment {
+   display: flex;
+   flex-basis: 280px;
+}
+.followers__subtitle-share{
+   display: flex;
+   flex-basis: 128px;
+}
+.followers__wrapper {
+   background-color: rgba(196, 196, 196, 0.1);
+   padding: 47px 0 38px 38px;
+   border-radius: 40px;
+   max-height: 600px;
+}
+.followers__inner {
+   margin-top: 23px;
+   max-height: 500px;
+   margin-right: 10px;
+   padding-right: 28px;
+   overflow-Y: auto;
+}
+.followers__inner::-webkit-scrollbar {
+   width: 10px;
+}
+
+.followers__inner::-webkit-scrollbar-track {
+   background-color: rgba(95, 201, 165, 0.1);
+}
+
+.followers__inner::-webkit-scrollbar-thumb {
+   width: 7px;
+   background-color: #5FC9A5;
+   border-radius: 40px;
+}
+.followers__item {
+   background: #fff;
+   position: relative;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   height: 74px;
+   border-radius: 16px;
+   border: 1px solid transparent;
+   padding-right: 30px;
+   margin-bottom: 10px;
+   cursor: pointer;
+   transition: box-shadow 0.3s linear;
+}
+
+.followers__item:hover {
+   transition: 0.3s;
+   border: 1px solid #051B61;
+   box-sizing: border-box;
+   box-shadow: 0 4px 21px -10px rgba(5, 27, 97, 0.4);
+}
+.followers__item:hover > .followers__item-comment {
+   transition: background 0.2s linear;
+   background: rgba(5, 27, 97, 0.1);
+}
+
+.item-checkbox::before,
+.item-checkbox::after {
+   left: 25px;
+   cursor: pointer;
+
+}
+
+.item-checkbox::after {
+   position: absolute;
+   transition: opacity 0.15s linear;
+   opacity: 0;
+   width: 10px;
+   height: 9px;
+   left: 28px;
+   background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMCIgaGVpZ2h0PSI3IiBmaWxsPSJub25lIiAgeG1sbnM6dj0iaHR0cHM6Ly92ZWN0YS5pby9uYW5vIj48cGF0aCBkPSJNMSAzbDIuNTAzIDMuMDRhMSAxIDAgMCAwIDEuNTU5LS4wMTlMOSAxIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjxkZWZzIC8+PC9zdmc+") no-repeat center;
+   background-size: contain;
+}
+.followers__item-checkbox-input:checked + .item-checkbox::before {
+   background: #5FC9A5;
+   border: 1px solid #5FC9A5;
+}
+.followers__item-checkbox-input:checked + .item-checkbox::after {
+   opacity: 1;
+}
+.followers__item.active {
+   border: 1px solid #5FC9A5 !important;
+   background-color: #F9F9F9 !important;
+}
+.form__analyser-btn.btn__large {
+   transition: width 0.15s linear, height 0.15s linear, background-color 0.15s linear;
+}
+.followers__item-user {
+   display: flex;
+   align-items: center;
+   padding-left: 60px;
+   flex-basis: 33%;
+}
+.item__user-img {
+   display: block;
+}
+.item__user-img img {
+   max-height: 54px;
+   max-width: 54px;
+   border-radius: 50%;
+}
+.item__user-name {
+   font-family: "GT Walsheim Pro", sans-serif;
+   font-size: 16px;
+   font-weight: 700;
+   line-height: 24px;
+   color: #051B61;
+   margin-left: 18px;
+}
+
+.followers__photo-analysis,
+.followers__item-comment {
+   display: flex;
+   align-items: center;
+   height: 54px;
+   padding: 13px;
+   border-radius: 16px;
+   background-color: #EAF4F1;
+   color: #051B61;
+   padding-left: 23px;
+}
+
+.followers__item-comment {
+   background-color: #F9F5ED;
+}
+
+.persent__photo,
+.persent__comment{
+   font-family: "GT Walsheim Pro", sans-serif;
+   font-weight: 400;
+   font-size: 26px;
+   color: #051B61;
+}
+
+.photo__signs,
+.item__comment-block {
+   font-family: "GT Walsheim Pro", sans-serif;
+   font-size: 12px;
+   padding-left: 32px;
+}
+
+.person__signs,
+.comment__row-one {
+   color: #4F4F4F;
+   font-weight: 400;
+   line-height: 19px;
+}
+
+.person__bmi,
+.comment-row-two {
+   color: #051B61;
+   font-weight: 700;
+}
+.comment-row-two {
+   color: #4F4F4F;
+   font-weight: 400;
+}
+.comment-row-two span{
+   color: #051B61;
+   font-weight: 700;
+}
+
+.followers__item-sign{
+   display: block;
+   position: relative;
+   width: 68px;
+   height: 48px;
+}
+.followers__item-sign::before{
+   content: "";
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%,-50%);
+   width: 24px;
+   height: 18px;
+   background:url("../images/icons/ref-arrow.svg");
+}
+/* banner__obesity ===================================*/
+.banner__img img {
+   width: 100%;
+   height: 100%;
+}
+.banner__obesity{
+   padding: 110px 0;
+   position: relative;
+   background:  url("../images/elems-design/banner/left-elem-banner.svg") no-repeat left,
+   url("../images/elems-design/banner/right-elem-banner.svg") no-repeat right bottom;
+}
+
+.banner__obesity-inner {
+   display: flex;
+   justify-content: space-between;
+   background: #459ED5 url("../images/icons/ellipse.svg")42% 21%/10px 10px no-repeat;
+   width: 100%;
+   height: 272px;
+   border-radius: 38px;
+}
+.banner__obesity-inner::before {
+   content: '';
+   position: absolute;
+   width: 8px;
+   height: 8px;
+   border-radius: 50%;
+   background: #5FC9A5;
+   left: 47vw;
+   top: 160px;
+}
+.banner__information {
+   font-family: "GT Walsheim Pro";
+   padding-top: 44px;
+   padding-left: 112px;
+   color: #fff;
+   font-size: 100px;
+   font-weight: 400;
+   line-height: 140px;
+}
+.banner__text {
+   font-size: 18px;
+   line-height: 27px;
+
+}
+/* ============================footer============================*/
+footer {
+   margin-top: 40px;
+}
+.footer__top {
+   display: flex;
+   justify-content: flex-start;
+}
+
+.footer__item{
+   margin-left: 15px;
+}
+
+.footer__item,
+.footer__logo {
+   display: flex;
+   flex-basis: 336px;
+}
+
+.footer__logo img {
+   width: 108px;
+   height: 77px;
+}
+
+.footer__item-list li+li{
+   margin-top: 10px;
+}
+
+.footer__item-list .footer__list-title{
+   margin-bottom: 12px;
+}
+
+.footer__item-list .footer__list-title a {
+   color: #051B61;
+   font-family: "GT Walsheim Pro";
+   font-size: 18px;
+   font-weight: 400;
+   line-height: 27px;
+   margin-bottom: 8px;
+}
+
+.footer__item-list a {
+   font-family: "GT Walsheim Pro";
+   font-size: 16px;
+   font-weight: 400;
+   line-height: 24px;
+   color: #8C8C8C;
+}
+
+.footer__bottom {
+   max-width: 192px;
+   margin-top: 50px;
+   margin-bottom: 111px;
+   user-select: none;
+}
+
+.footer__bottom-text {
+   font-family: "GT Walsheim Pro", sans-serif;
+   font-size: 14px;
+   font-weight: 400;
+   line-height: 21px;
+   color: #ccc;
+}
+.followers__data {
+   display: flex;
+   align-items: center;
+   position: relative;
+   height: 60px;
+   max-width: 660px;
+   width: 100%;
+   border-radius: 28px;
+   padding: 0 40px;
+   border: 1px solid #8C8C8C;
+   outline: transparent;
+}
+.followers__data .user__followers-count + .user__followers-count {
+   margin-left: 24px;
+}
+.followers__below {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   margin-top: 40px;
+}
+.followers__btn-group {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   width: 100%;
+}
+.followers__btn-group .analysis__btn {
+   max-width: 254px;
+   height: 60px;
+}
+.followers__btns {
+   display: flex;
+   width: 100%;
+   padding: 0 33px;
+}
+
+/*================== page Accaunt analyser ==================*/
+.little__text-violet {
+   font-family: "GT Walsheim Pro", sans-serif;
+   font-size: 16px;
+   font-weight: 400;
+   line-height: 21px;
+   color: #051B61;
+}
+.little__text-white {
+   color: #8C8C8C;
+   font-weight: 400;
+   line-height: 33px;
+
+}
+
+.user__name,
+.comment__user-name {
+   font-family: "GT Walsheim Pro", sans-serif;
+   font-size: 16px;
+   font-weight: 700;
+   line-height: 24px;
+   color: #051B61;
+}
+
+.photo__analysis,
+.comment__analysis {
+   margin-top: 120px;
+}
+
+.photo__analysis-inner,
+.comment__analysis-inner {
+   display: grid;
+   grid-auto-flow: column;
+   grid-gap: 30px;
+}
+
+.block__analysis-head,
+.block__comment-head {
+   height: 120px;
+   border-bottom: 1px solid #E5E5E5;
+}
+
+.photo__analysis-title,
+.comment__analysis-title {
+   margin-bottom: 50px;
+}
+
+.block__analysis-inner,
+.block__comment-inner {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding: 35px 40px 0px 40px;
+}
+
+.photo__analysis-block {
+   background-color: #F9F9F9;
+   max-width: 864px;
+   border-radius: 30px;
+   height: 613px;
+}
+
+.comment__analysis-block {
+   background-color: #F9F9F9;
+   max-width: 864px;
+   border-radius: 30px;
+   height: 408px;
+}
+
+.head__analysis-description,
+.head__comment-description {
+   display: flex;
+   flex-basis: 413px;
+   align-items: center;
+}
+
+.description__user-information,
+.comment__user-information {
+   display: flex;
+   align-items: flex-end;
+   margin-left: 25px;
+}
+
+.description__user-img img,
+.comment__user-img img {
+   width: 60px;
+   height: 60px;
+   border-radius: 50%;
+}
+
+.user__wrapper,
+.comment__user-wrapper {
+   max-width: 120px;
+}
+
+.user__subscription-count {
+   margin-left: 25px;
+}
+
+.user__subscription-count .count__subscriptions+.count__subscriptions {
+   padding-left: 5px;
+}
+
+
+.head__analysis-btns {
+   display: flex;
+   justify-content: space-between;
+   flex-basis: 376px;
+}
+.btn__small-42 {
+   height: 42px;
+   background-color: #459ED5;
+   color: #fff;
+   border-radius: 30px;
+   outline: transparent;
+   border: 1px solid #459ED5;
+
+}
+
+.analysis__btn {
+   max-width: 173px;
+   width: 100%;
+   font-size: 14px;
+   line-height: 21px;
+   text-align: center;
+   transition: background-color 0.3s ease-out;
+}
+
+.analysis__btn:hover {
+   background-color: transparent;
+   color: #459ED5;
+}
+
+.analysis__btn+.analysis__btn {
+   margin-left: 25px;
+}
+
+.block__analysis-content {
+   padding: 18px 10px 20px 32px;
+}
+
+.content__photos {
+   overflow-x: auto;
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr 1fr;
+   grid-gap: 2%;
+   background: #F9F9F9;
+   height: 455px;
+   padding-right: 16px;
+}
+
+.content__photos::-webkit-scrollbar {
+   width: 10px;
+}
+
+.content__photos::-webkit-scrollbar-track {
+   background-color: rgba(95, 201, 165, 0.1);
+}
+
+.content__photos::-webkit-scrollbar-thumb {
+   width: 7px;
+   background-color: #5FC9A5;
+   border-radius: 40px;
+}
+
+.content__photo img {
+   width: 100%;
+   border-radius: 30px;
+}
+
+.aside__bar {
+   height: 613px;
+   max-width: 416px;
+   width: 380px;
+}
+
+.aside__bar-row1 {
+   padding: 40px;
+   background-color: #F9F9F9;
+   border-radius: 30px;
+   height: 408px;
+   margin-bottom: 32px;
+}
+
+.aside__bar-row2 {
+   overflow: hidden;
+   background-color: #F9F9F9;
+   border-radius: 30px;
+   padding-top: 20px;
+   height: 174px;
+}
+
+.progres__bar-title {
+   font-family: "GT Walsheim Pro", sans-serif;
+}
+.progres__circle {
+   margin-top: 40px;
+   text-align: center;
+}
+.title__row-one {
+   color: #051B61;
+   font-size: 20px;
+   font-weight: 700;
+   line-height: 27px;
+}
+
+.title__row-two {
+   color: #4F4F4F;
+   font-size: 14px;
+   font-weight: 400;
+   line-height: 21px;
+   margin-top: 7px;
+}
+
+.block__comment-content {
+   height: 240px;
+   padding: 18px 10px 20px 32px;
+}
+
+.block__comment-wrapper {
+   height: 240px;
+   overflow-y: auto;
+   overflow-x: hidden;
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   grid-gap: 19px;
+   padding-right: 19px;
+}
+
+.content__text-item {
+   height: 110px;
+   overflow: hidden;
+   padding: 16px 30px 16px 30px;
+   background-color: #fff;
+   border-radius: 18px;
+}
+.content__text {
+   height: 70px;
+   overflow: hidden;
+   text-overflow: ellipsis !important;
+   font-family: "GT Walsheim Pro",sans-serif;
+   font-size: 12px;
+   font-weight: 400;
+   line-height: 18px;
+   color: #191919;
+}
+
+.block__comment-wrapper::-webkit-scrollbar {
+   width: 10px;
+}
+
+.block__comment-wrapper::-webkit-scrollbar-track {
+   background-color: rgba(95, 201, 165, 0.1);
+}
+
+.block__comment-wrapper::-webkit-scrollbar-thumb {
+   width: 7px;
+   background-color: #5FC9A5;
+   border-radius: 40px;
+}
+
+.circle {
+   width: 200px;
+   margin: 6px 20px 20px;
+   display: inline-block;
+   position: relative;
+   text-align: center;
+   vertical-align: top;
+}
+.circle strong {
+   position: absolute;
+   top: 50%;
+   transform: translateY(-50%);
+   left: 0;
+   width: 100%;
+   color: #051B61;
+   text-align: center;
+   line-height: 45px;
+   font-size: 43px;
+}
+.circle strong i {
+   font-style: normal;
+}
+.content__photo img {
+   transition: opacity 0.3s linear;
+}
+.content__photo:hover > a img {
+   opacity: 0.3;
+}
